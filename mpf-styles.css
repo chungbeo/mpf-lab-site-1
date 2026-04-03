@@ -1100,6 +1100,20 @@ nav {
   margin-top: 1rem;
 }
 
+.profile-card-compact-copy .profile-title {
+  font-size: 1.5rem;
+  line-height: 1.08;
+}
+
+.profile-card-compact-copy .profile-affil {
+  font-size: 0.88rem;
+}
+
+.profile-card-compact-copy .profile-bio {
+  font-size: 0.92rem;
+  margin-top: 0.8rem;
+}
+
 .tag-list,
 .research-interests,
 .training-tags,
@@ -1691,6 +1705,7 @@ footer {
     transition: none !important;
   }
 }
+
 
 
 

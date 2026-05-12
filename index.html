@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang='en'>
 <head>
   <meta charset='UTF-8'>
@@ -6,6 +6,12 @@
   <meta name='description' content='Macro Public Finance Lab @ ANU: research on taxation, transfers, pensions, inequality, quantitative models, and training.'>
   <title>Macro Public Finance Lab @ ANU</title>
   <link rel='stylesheet' href='./mpf-styles.css'>
+  <style>
+    .profile-media { width: 140px; flex-shrink: 0; }
+    .profile-photo { border-radius: 1rem; overflow: hidden; aspect-ratio: 4/5; }
+    .profile-photo img { width: 100%; height: 100%; object-fit: cover; object-position: center top; }
+    .profile-card { display: flex; gap: 1.5rem; align-items: flex-start; }
+  </style>
 </head>
 <body class='page-home'>
   <nav>
@@ -25,9 +31,9 @@
         <ul class='nav-links'>
           <li><a href='./about.html'>About</a></li>
           <li><a href='#research'>Research</a></li>
-          <li><a href='./publications.html'>Publications</a></li>
+          <li><a href='./publications.html'>Publication</a></li>
           <li><a href='./team.html'>Team</a></li>
-          <li><a href='./models.html'>Models</a></li>
+          <li><a href='./models.html'>Model</a></li>
           <li><a href='./training.html'>Training</a></li>
           <li><a href='./events.html'>Events</a></li>
           <li class='nav-cta'><a href='#contact'>Contact</a></li>
@@ -44,20 +50,22 @@
             <div class='hero-label'>Macro Public Finance Lab @ ANU</div>
             <p class='hero-desc'>We integrate micro data into quantitative macroeconomic models to analyse how economic policies jointly determine household behaviour, aggregate outcomes, and social welfare.</p>
             <div class='hero-actions'>
+              <a href='./team.html' class='btn btn-ghost'>Team</a>
               <a href='./research.html' class='btn btn-primary'>Explore research themes</a>
               <a href='./publications.html' class='btn btn-ghost'>View publications</a>
+              <a href='./statistics.html' class='btn btn-ghost'>Data insights</a>
+              <a href='./events.html' class='btn btn-ghost'>Events</a>
+              <a href='./models.html' class='btn btn-ghost'>Model</a>
+              <a href='./training.html' class='btn btn-ghost'>Training</a>
             </div>
             <div class='hero-proof'>
-              <span class='evidence-chip'>Based at the Research School of Economics, ANU</span>
-              <span class='evidence-chip'>Connected to CEPAR and Treasury-facing policy work</span>
-              <span class='evidence-chip'>Training, models, and applied policy analysis</span>
             </div>
           </div>
           <aside class='hero-sidebar'>
             <div class='sidebar-eyebrow'>Research profile</div>
             <div class='metric-list'>
               <div class='metric'>
-                <div class='metric-value'>50+</div>
+                <div class='metric-value'>40+</div>
                 <div class='metric-label'>Publications and working papers across macroeconomics and public finance.</div>
               </div>
               <div class='metric'>
@@ -66,11 +74,7 @@
               </div>
               <div class='metric'>
                 <div class='metric-value'>10+</div>
-                <div class='metric-label'>Researchers, students, and collaborators linked to the lab's research agenda.</div>
-              </div>
-              <div class='metric'>
-                <div class='metric-value'>15+</div>
-                <div class='metric-label'>Years of work on quantitative fiscal policy and lifecycle modelling.</div>
+                <div class='metric-label'>Researchers, HDR students, and collaborators linked to the lab's research agenda.</div>
               </div>
             </div>
           </aside>
@@ -100,83 +104,55 @@
         </div>
       </div>
     </div>
-
-    <section class='section' id='about'>
+<section class='section section-muted'>
       <div class='container'>
-        <div class='split-grid-wide'>
-          <div>
-            <div class='section-header'>
-              <div class='badge'>About the lab</div>
-              <h2 class='section-title'>Rigorous economics with direct policy application</h2>
-              <p class='section-sub'>The lab studies how governments can use taxes, transfers, debt, and public spending to improve economic outcomes across households, generations, and the broader economy.</p>
+        <div class='section-header'>
+          <div class='badge'>Engage with the Lab</div>
+          <p class='section-sub'>Follow seminars and workshops, request publications, or get in touch about research collaboration and training.</p>
+        </div>
+        <div class='event-cards'>
+          <article class='event-card'>
+            <div class='event-date-box'>
+              <div class='event-date-day'>17</div>
+              <div class='event-date-month'>Aug 2026</div>
             </div>
-            <div class='prose'>
-              <p>The Macro Public Finance Lab @ ANU develops structural models that connect micro-level heterogeneity to macroeconomic dynamics. Our research is designed to clarify the distributional, behavioural, and aggregate consequences of fiscal policy.</p>
-              <p>We work at the intersection of academic research and policy engagement. That includes the use of administrative data, lifecycle modelling, and institutionally grounded policy counterfactuals relevant to Australia and comparable economies.</p>
+            <div class='event-content'>
+              <div class='event-badge'>Conference</div>
+              <h3>EEA-ESEM 2026</h3>
+              <p class='event-desc'>Dublin. August 17 - 21, 2026</p>
             </div>
-            <div class='point-list' style='margin-top: 1.5rem;'>
-              <div class='point-item'>
-                <div class='point-marker'>1</div>
-                <div>
-                  <div class='point-title'>Micro-level evidence</div>
-                  <div class='point-copy'>Administrative records and household data are used to discipline model behaviour and policy simulations.</div>
-                </div>
-              </div>
-              <div class='point-item'>
-                <div class='point-marker'>2</div>
-                <div>
-                  <div class='point-title'>Structural modelling</div>
-                  <div class='point-copy'>Lifecycle and overlapping-generations models quantify long-run responses to fiscal reforms.</div>
-                </div>
-              </div>
-              <div class='point-item'>
-                <div class='point-marker'>3</div>
-                <div>
-                  <div class='point-title'>Policy evaluation</div>
-                  <div class='point-copy'>Distributional, welfare, and macro effects are studied jointly rather than in isolation.</div>
-                </div>
-              </div>
+          </article>
+          <article class='event-card'>
+            <div class='event-date-box'>
+              <div class='event-date-day'>29</div>
+              <div class='event-date-month'>Jun 2026</div>
             </div>
-          </div>
-          <div class='highlight-stack'>
-            <div class='highlight-card'>
-              <h4>ANU research setting</h4>
-              <p>The lab sits within one of Australia's leading environments for economic research and policy analysis.</p>
+            <div class='event-content'>
+              <div class='event-badge'>Conference</div>
+              <h3>32nd International Conference: Computing in Economics and Finance</h3>
+              <p class='event-desc'>Ca' Foscari University of Venice, Venice, Italy. June 29 - July 1, 2026</p>
             </div>
-            <div class='highlight-card'>
-              <h4>CEPAR connection</h4>
-              <p>Research links to the ARC Centre of Excellence in Population Ageing Research and related ageing-policy questions.</p>
+          </article>
+          <article class='event-card'>
+            <div class='event-date-box'>
+              <div class='event-date-day'>4</div>
+              <div class='event-date-month'>Jun 2026</div>
             </div>
-            <div class='highlight-card'>
-              <h4>Treasury-facing engagement</h4>
-              <p>The research agenda is designed to speak directly to fiscal design, modelling, and macroeconomic policy advice.</p>
+            <div class='event-content'>
+              <div class='event-badge'>Time not specified</div>
+              <h3>Curtin University Seminar</h3>
+              <p class='event-desc'>June 4, 2026</p>
             </div>
-            <div class='highlight-card'>
-              <h4>International collaboration</h4>
-              <p>Projects connect with collaborators in Australia, North America, and beyond on applied macro public finance.</p>
-            </div>
-          </div>
+          </article>
         </div>
       </div>
     </section>
 
-        <section class='section section-muted' id='research'>
-      <div class='container'>
-        <div class='section-header center'>
-          <div class='badge'>Research</div>
-          <h2 class='section-title'>Research is now organised on a dedicated page</h2>
-          <p class='section-sub'>Explore the lab's six research themes, research approach, and links to the related theme pages in one place.</p>
-        </div>
-        <div class='cta-panel center'>
-          <a href='./research.html' class='btn btn-primary'>Open research page</a>
-        </div>
-      </div>
-    </section>
 
     <section class='section' id='publications'>
       <div class='container'>
         <div class='section-header'>
-          <div class='badge'>Publications</div>
+          <div class='badge'>Publication</div>
           <h2 class='section-title'>Featured recent work</h2>
           <p class='section-sub'>Selected papers from the lab's working-paper, journal, and policy-facing research output.</p>
         </div>
@@ -185,190 +161,65 @@
             <div>
               <div class='pub-kicker-row'>
                 <span class='status-chip'>Working paper</span>
-                <span class='status-chip'>2025</span>
+                <span class='status-chip'>WP2026-01</span>
               </div>
-              <h3 class='pub-title'>The Evolution of Earnings Distribution in a Sustained Growth Economy: Evidence from Australia</h3>
-              <div class='pub-authors'>Darapheak Tin, Chung Tran, Nabeeh Zakariyya</div>
-              <div class='pub-meta'>MPF Lab Working Paper Series</div>
+              <h3 class='pub-title'>On the Complementarity of Public and Private Pensions: Equity, Efficiency, and Optimal Design</h3>
+              <div class='pub-authors'>George Kudrna, Chung Tran</div>
+              <div class='pub-meta'>MPF Lab Working Paper Series, 2026</div>
             </div>
             <div class='pub-link-group'>
-              <a class='link-chip' href='mailto:chung.tran@anu.edu.au?subject=MPF%20Lab%20publication%20request'>Request copy</a>
-              <a class='link-chip secondary' href='./publications.html'>View all publications</a>
+              <a class='link-chip' href='https://drive.google.com/file/d/1jI9VeRcDERBMaXowB4EZSlyMfL4AldmE/view?usp=sharing'>Paper</a>
             </div>
           </article>
           <article class='pub-item'>
             <div>
               <div class='pub-kicker-row'>
                 <span class='status-chip'>Working paper</span>
-                <span class='status-chip'>2024</span>
+                <span class='status-chip'>WP2025-01</span>
+              </div>
+              <h3 class='pub-title'>The Evolution of Earnings Distribution in a Sustain Growth Economy: Evidence from Australia</h3>
+              <div class='pub-authors'>Darapheak Tin, Chung Tran, Nabeeh Zakariyya</div>
+              <div class='pub-meta'>MPF Lab Working Paper Series, 2025</div>
+            </div>
+            <div class='pub-link-group'>
+              <a class='link-chip' href='https://www.dropbox.com/scl/fi/uf8dzw77oyh1mt9rbxdpk/WP2025-01.pdf?rlkey=nuqa8pzonf08qxqv27716idno&dl=0'>Paper</a>
+            </div>
+          </article>
+          <article class='pub-item'>
+            <div>
+              <div class='pub-kicker-row'>
+                <span class='status-chip'>Working paper</span>
+                <span class='status-chip'>WP2024-03</span>
               </div>
               <h3 class='pub-title'>Health Heterogeneity, Portfolio Choice and Wealth Inequality</h3>
               <div class='pub-authors'>Juergen Jung, Chung Tran</div>
-              <div class='pub-meta'>MPF Lab Working Paper Series</div>
+              <div class='pub-meta'>MPF Lab Working Paper Series, 2024</div>
             </div>
             <div class='pub-link-group'>
-              <a class='link-chip' href='mailto:chung.tran@anu.edu.au?subject=MPF%20Lab%20publication%20request'>Request copy</a>
+              <a class='link-chip' href='https://www.dropbox.com/scl/fi/jpcs0yhhfhu8abcmezl93/WP2024-02.pdf?rlkey=m9ba6wafeb4v7zi0np00krth3&dl=0'>Paper</a>
             </div>
           </article>
           <article class='pub-item'>
             <div>
               <div class='pub-kicker-row'>
-                <span class='status-chip'>Journal article</span>
-                <span class='status-chip'>2022</span>
+                <span class='status-chip'>Working paper</span>
+                <span class='status-chip'>WP2024-02</span>
               </div>
-              <h3 class='pub-title'>Sustainable Pension in an Ageing Economy</h3>
-              <div class='pub-authors'>Kudrna, Tran, Woodland</div>
-              <div class='pub-meta'>European Economic Review</div>
+              <h3 class='pub-title'>Child-Related Transfers, Means Testing and Welfare</h3>
+              <div class='pub-authors'>Darapheak Tin, Chung Tran</div>
+              <div class='pub-meta'>MPF Lab Working Paper Series, 2024</div>
             </div>
             <div class='pub-link-group'>
-              <a class='link-chip' href='mailto:chung.tran@anu.edu.au?subject=MPF%20Lab%20publication%20request'>Request citation</a>
+              <a class='link-chip' href='https://www.dropbox.com/scl/fi/jx457zteyibq314jr6jzb/WP2024-01.pdf?rlkey=5th7a389y8o845dpdf98mm9nh&dl=0'>Paper</a>
             </div>
           </article>
-          <article class='pub-item'>
-            <div>
-              <div class='pub-kicker-row'>
-                <span class='status-chip'>Policy research</span>
-                <span class='status-chip'>2025</span>
-              </div>
-              <h3 class='pub-title'>Quantitative Policy Evaluation in Public Finance</h3>
-              <div class='pub-authors'>Chung Tran</div>
-              <div class='pub-meta'>Australian Treasury seminar and policy engagement</div>
-            </div>
-            <div class='pub-link-group'>
-              <a class='link-chip' href='mailto:chung.tran@anu.edu.au?subject=MPF%20Lab%20policy%20research%20enquiry'>Enquire</a>
-            </div>
-          </article>
+        </div>
+        <div class='hero-actions' style='margin-top: 1.5rem;'>
+          <a class='btn btn-secondary' href='./publications.html'>View all publications</a>
         </div>
       </div>
     </section>
-
-    <section class='section section-muted' id='team'>
-      <div class='container'>
-        <div class='section-header'>
-          <div class='badge'>People</div>
-          <h2 class='section-title'>Researchers, students, and collaborators</h2>
-          <p class='section-sub'>The lab brings together current core members working on macro public finance alongside an international collaboration network.</p>
-        </div>
-        <div class='profile-card'>
-          <div class='profile-media'>
-            <div class='profile-photo'>
-              <img src='./images/team/ChungTran.jpg' alt='Professor Chung Tran'>
-            </div>
-            <div class='profile-actions'>
-              <a href='mailto:chung.tran@anu.edu.au?subject=MPF%20Lab%20enquiry' class='btn btn-secondary'>Email the lab</a>
-              <a href='./team.html' class='btn btn-outline'>View the full team</a>
-            </div>
-          </div>
-          <div>
-            <div class='profile-role'>Lab director</div>
-            <h3 class='profile-title'>Prof. Chung Tran</h3>
-            <div class='profile-affil'>Associate Professor, Australian National University</div>
-            <p class='profile-bio'>Chung Tran's research focuses on macroeconomics, public economics, and development economics, with a strong emphasis on linking frontier academic work to policy applications. His work includes income taxation, retirement financing, health macroeconomics, and quantitative fiscal evaluation.</p>
-          </div>
-        </div>
-        <div class='team-grid' style='margin-top: 1.4rem;'>
-          <article class='team-card'>
-            <div class='team-avatar'><img src='./images/team/JuergenJung.jpg' alt='Juergen Jung'></div>
-            <div class='team-role'>Senior Fellow</div>
-            <h3>Juergen Jung</h3>
-            <p class='team-affil'>Towson University</p>
-          </article>
-          <article class='team-card'>
-            <div class='team-avatar'><img src='./images/team/GeorgeKudrna.jpg' alt='George Kudrna'></div>
-            <div class='team-role'>Senior Fellow</div>
-            <h3>George Kudrna</h3>
-            <p class='team-affil'>University of New South Wales</p>
-          </article>
-          <article class='team-card'>
-            <div class='team-avatar'><img src='./images/team/NabeehZakariyya.jpg' alt='Nabeeh Zakariyya'></div>
-            <div class='team-role'>Fellow</div>
-            <h3>Nabeeh Zakariyya</h3>
-            <p class='team-affil'>Australian Treasury</p>
-          </article>
-          <article class='team-card'>
-            <div class='team-avatar'><img src='./images/team/SebastianWende.jpeg' alt='Sebastian Wende'></div>
-            <div class='team-role'>Fellow</div>
-            <h3>Sebastian Wende</h3>
-            <p class='team-affil'>International Monetary Fund</p>
-          </article>
-          <article class='team-card'>
-            <div class='team-avatar'><img src='./images/team/DarapheakTin.jpg' alt='Darapheak Tin'></div>
-            <div class='team-role'>Fellow</div>
-            <h3>Darapheak Tin</h3>
-            <p class='team-affil'>ACT Government</p>
-          </article>
-          <article class='team-card'>
-            <div class='team-avatar'><img src='./images/team/FajarOktiyanto.png' alt='Fajar Oktiyanto'></div>
-            <div class='team-role'>Research Fellow</div>
-            <h3>Fajar Oktiyanto</h3>
-            <p class='team-affil'>Bank of Indonesia</p>
-          </article>
-          <article class='team-card'>
-            <div class='team-avatar'><img src='./images/team/IrisManHinChio.jpeg' alt='Iris Man Hin Chio'></div>
-            <div class='team-role'>Doctoral Fellow</div>
-            <h3>Iris Man Hin Chio</h3>
-            <p class='team-affil'>Australian National University</p>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <section class='dark-section' id='models'>
-      <div class='container'>
-        <div class='section-header'>
-          <div class='badge'>Models and tools</div>
-          <h2 class='section-title'>Quantitative frameworks for policy evaluation</h2>
-          <p class='section-sub'>The lab develops reusable models for taxation, pensions, health, and inequality with attention to heterogeneity and fiscal design.</p>
-        </div>
-        <div class='model-grid'>
-          <article class='model-card'>
-            <div class='model-type'>Microsimulation</div>
-            <h3>Tax Simulator Australia</h3>
-            <p>A lifecycle microsimulation framework for evaluating income tax reforms, means-tested transfers, and distributional policy effects in Australia.</p>
-            <div class='model-feature-list'>
-              <span class='model-feature'>Lifecycle model</span>
-              <span class='model-feature'>Australian tax system</span>
-              <span class='model-feature'>Distributional analysis</span>
-            </div>
-          </article>
-          <article class='model-card'>
-            <div class='model-type'>OLG framework</div>
-            <h3>Endogenous health and portfolio choice</h3>
-            <p>A stochastic overlapping-generations model used to study health spending, insurance take-up, and wealth accumulation over the lifecycle.</p>
-            <div class='model-feature-list'>
-              <span class='model-feature'>Health capital</span>
-              <span class='model-feature'>Insurance</span>
-              <span class='model-feature'>Stochastic general equilibrium</span>
-            </div>
-          </article>
-          <article class='model-card'>
-            <div class='model-type'>Earnings dynamics</div>
-            <h3>Inequality and non-Gaussian shocks</h3>
-            <p>A structural approach to earnings dynamics calibrated to administrative tax records and household data, with applications to inequality and redistribution.</p>
-            <div class='model-feature-list'>
-              <span class='model-feature'>Admin data</span>
-              <span class='model-feature'>Inequality</span>
-              <span class='model-feature'>Heterogeneous agents</span>
-            </div>
-          </article>
-          <article class='model-card'>
-            <div class='model-type'>Retirement policy</div>
-            <h3>Pensions and superannuation</h3>
-            <p>A policy model for retirement financing, pension reform, and the welfare effects of ageing and fiscal sustainability.</p>
-            <div class='model-feature-list'>
-              <span class='model-feature'>Ageing economy</span>
-              <span class='model-feature'>Pension reform</span>
-              <span class='model-feature'>Welfare analysis</span>
-            </div>
-          </article>
-        </div>
-        <div style='margin-top: 1.5rem;'>
-          <a href='./models.html' class='btn btn-primary'>Explore the models page</a>
-        </div>
-      </div>
-    </section>
-
-    <section class='section' id='training'>
+<section class='section' id='training'>
       <div class='container'>
         <div class='curriculum-layout'>
           <div>
@@ -400,51 +251,6 @@
       </div>
     </section>
 
-    <section class='section section-muted'>
-      <div class='container'>
-        <div class='section-header'>
-          <div class='badge'>Events and next steps</div>
-          <h2 class='section-title'>Engage with the lab</h2>
-          <p class='section-sub'>Follow seminars and workshops, request publications, or get in touch about research collaboration and training.</p>
-        </div>
-        <div class='event-cards'>
-          <article class='event-card'>
-            <div class='event-date-box'>
-              <div class='event-date-day'>15</div>
-              <div class='event-date-month'>Nov 2025</div>
-            </div>
-            <div class='event-content'>
-              <div class='event-badge'>Workshop</div>
-              <h3>Annual PhD Workshop: Quantitative Methods in Public Finance</h3>
-              <p class='event-desc'>An intensive training event for doctoral students and early-career economists focused on structural modelling and fiscal policy simulation.</p>
-              <div class='event-location'>ANU, Canberra</div>
-            </div>
-          </article>
-          <article class='event-card'>
-            <div class='event-date-box'>
-              <div class='event-date-day'>Mar</div>
-              <div class='event-date-month'>2026</div>
-            </div>
-            <div class='event-content'>
-              <div class='event-badge'>Seminar</div>
-              <h3>Treasury Capacity Building Seminar</h3>
-              <p class='event-desc'>Model-based training for government economists on quantitative fiscal policy evaluation and counterfactual analysis.</p>
-              <div class='event-location'>Australian Treasury, Canberra</div>
-            </div>
-          </article>
-        </div>
-        <div class='cta-panel' style='margin-top: 1.5rem;'>
-          <div>
-            <h3>Need a publication, model, or training contact?</h3>
-            <p>The site now presents the lab more clearly, and direct enquiries can be routed through the lab email while resource-specific links are being assembled.</p>
-          </div>
-          <div class='cta-actions'>
-            <a href='mailto:chung.tran@anu.edu.au?subject=MPF%20Lab%20enquiry' class='btn btn-primary'>Contact the lab</a>
-            <a href='./events.html' class='btn btn-ghost'>View events</a>
-          </div>
-        </div>
-      </div>
-    </section>
   </main>
 
   <footer id='contact'>
@@ -469,8 +275,8 @@
           <ul class='footer-links'>
             <li><a href='./about.html'>About the lab</a></li>
             <li><a href='./team.html'>Team</a></li>
-            <li><a href='./publications.html'>Publications</a></li>
-            <li><a href='./models.html'>Models</a></li>
+            <li><a href='./publications.html'>Publication</a></li>
+            <li><a href='./models.html'>Model</a></li>
             <li><a href='./training.html'>Training</a></li>
           </ul>
         </div>
@@ -499,13 +305,15 @@
         <div class='footer-bottom-links'>
           <a href='./index.html'>Home</a>
           <a href='./about.html'>About</a>
-          <a href='./publications.html'>Publications</a>
+          <a href='./publications.html'>Publication</a>
         </div>
       </div>
     </div>
   </footer>
 </body>
 </html>
+
+
 
 
 

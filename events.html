@@ -54,7 +54,29 @@
         <div class='section-header'>
           <div class='badge'>2026</div>
         </div>
-        <div class='event-cards'>
+        <div class='event-cards event-cards-collapsible' id='events-2026' data-initial-count='6' data-batch-size='6'>
+          <article class='event-card'>
+            <div class='event-date-box'>
+              <div class='event-date-day'>1</div>
+              <div class='event-date-month'>Sep 2026</div>
+            </div>
+            <div class='event-content'>
+              <div class='event-badge'>Publication news</div>
+              <h3><a href='https://www.sciencedirect.com/science/article/pii/S0164070426000546?via%3Dihub'>Uninterrupted Growth, Redistribution and Inequality: The Australian Case 1991-2020</a></h3>
+              <p class='event-desc'>Chung Tran and Nabeeh Zakariyya. Journal of Macroeconomics, Volume 89, September 2026.</p>
+            </div>
+          </article>
+          <article class='event-card'>
+            <div class='event-date-box'>
+              <div class='event-date-day'>1</div>
+              <div class='event-date-month'>Oct 2026</div>
+            </div>
+            <div class='event-content'>
+              <div class='event-badge'>Publication news</div>
+              <h3><a href='https://onlinelibrary.wiley.com/doi/10.1111/1475-4932.70055'>The Evolution of the Earnings Distribution in a Sustained Growth Economy: Evidence from Australia</a></h3>
+              <p class='event-desc'>Darapheak Tin, Chung Tran and Nabeeh Zakariyya. Economic Record, in press 2026.</p>
+            </div>
+          </article>
           <article class='event-card'>
             <div class='event-date-box'>
               <div class='event-date-day'>17</div>
@@ -64,6 +86,17 @@
               <div class='event-badge'>Conference</div>
               <h3>EEA-ESEM 2026</h3>
               <p class='event-desc'>Dublin. August 17 - 21, 2026</p>
+            </div>
+          </article>
+          <article class='event-card'>
+            <div class='event-date-box'>
+              <div class='event-date-day'>7</div>
+              <div class='event-date-month'>Jul 2026</div>
+            </div>
+            <div class='event-content'>
+              <div class='event-badge'>Conference</div>
+              <h3>Australian Conference of Economists</h3>
+              <p class='event-desc'>Canberra. July 7 - 10, 2026</p>
             </div>
           </article>
           <article class='event-card'>
@@ -122,6 +155,9 @@
             </div>
           </article>
         </div>
+        <div class='event-actions'>
+          <button class='btn btn-secondary event-more-button' type='button' data-event-toggle aria-controls='events-2026'>Show more events</button>
+        </div>
       </div>
     </section>
 
@@ -130,7 +166,7 @@
         <div class='section-header'>
           <div class='badge'>Past events</div>
         </div>
-        <div class='event-cards'>
+        <div class='event-cards event-cards-collapsible' id='events-past' data-initial-count='6' data-batch-size='6'>
           <article class='event-card'>
             <div class='event-date-box'>
               <div class='event-date-day'>24</div>
@@ -242,6 +278,9 @@
             </div>
           </article>
         </div>
+        <div class='event-actions'>
+          <button class='btn btn-secondary event-more-button' type='button' data-event-toggle aria-controls='events-past'>Show more events</button>
+        </div>
       </div>
     </section>
 
@@ -292,9 +331,78 @@
       </div>
     </div>
   </footer>
+  <script>
+    const monthMap = {
+      Jan: 1, Feb: 2, Mar: 3, Apr: 4, May: 5, Jun: 6,
+      Jul: 7, Aug: 8, Sep: 9, Oct: 10, Nov: 11, Dec: 12
+    };
+
+    function parseEventCard(card) {
+      const dayText = card.querySelector('.event-date-day')?.textContent.trim() || '0';
+      const monthText = card.querySelector('.event-date-month')?.textContent.trim() || '';
+      const [monthName, yearText] = monthText.split(' ');
+      const day = Number(dayText);
+      const month = monthMap[monthName] || 0;
+      const year = Number(yearText) || 0;
+      const badgeText = card.querySelector('.event-badge')?.textContent.trim() || '';
+      const timeMatch = badgeText.match(/^(\d{1,2}):(\d{2})$/);
+      const minutes = timeMatch ? Number(timeMatch[1]) * 60 + Number(timeMatch[2]) : 24 * 60;
+      return { year, month, day, minutes };
+    }
+
+    function sortEventCards(container) {
+      const cards = Array.from(container.querySelectorAll('.event-card'));
+      cards.sort((a, b) => {
+        const left = parseEventCard(a);
+        const right = parseEventCard(b);
+        if (left.year !== right.year) return right.year - left.year;
+        if (left.month !== right.month) return right.month - left.month;
+        if (left.day !== right.day) return right.day - left.day;
+        return right.minutes - left.minutes;
+      });
+      cards.forEach(card => container.appendChild(card));
+    }
+
+    function updateEventList(container, button) {
+      const cards = Array.from(container.querySelectorAll('.event-card'));
+      const initialCount = Number(container.dataset.initialCount) || cards.length;
+      const batchSize = Number(container.dataset.batchSize) || initialCount;
+      const visibleCount = Math.min(Number(container.dataset.visibleCount) || initialCount, cards.length);
+
+      cards.forEach((card, index) => {
+        card.classList.toggle('event-card-hidden', index >= visibleCount);
+      });
+
+      if (!button) return;
+
+      button.hidden = cards.length <= initialCount;
+      button.textContent = visibleCount >= cards.length ? 'Show fewer events' : 'Show more events';
+      button.setAttribute('aria-expanded', String(visibleCount >= cards.length));
+      button.dataset.batchSize = String(batchSize);
+    }
+
+    function initEventList(container) {
+      sortEventCards(container);
+
+      const button = document.querySelector(`[data-event-toggle][aria-controls="${container.id}"]`);
+      container.dataset.visibleCount = String(Number(container.dataset.initialCount) || container.querySelectorAll('.event-card').length);
+      updateEventList(container, button);
+
+      if (!button) return;
+
+      button.addEventListener('click', () => {
+        const cards = container.querySelectorAll('.event-card');
+        const initialCount = Number(container.dataset.initialCount) || cards.length;
+        const batchSize = Number(container.dataset.batchSize) || initialCount;
+        const visibleCount = Number(container.dataset.visibleCount) || initialCount;
+        const nextCount = visibleCount >= cards.length ? initialCount : Math.min(visibleCount + batchSize, cards.length);
+
+        container.dataset.visibleCount = String(nextCount);
+        updateEventList(container, button);
+      });
+    }
+
+    document.querySelectorAll('.event-cards').forEach(initEventList);
+  </script>
 </body>
 </html>
-
-
-
-
